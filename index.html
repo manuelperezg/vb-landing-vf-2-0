@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- change color top bar -->
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#2771EB" />
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#2771EB" />
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#2771EB" />
+
+    <title>Viva Fan | Viva Aerobus</title>
+
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K6V2B2Q');</script>
+
+
+    <!-- head start here -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://mty.vivaaerobus.io/viva-styles.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https:///cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="viva-header header-background">
+            <div class="container h-100">
+                <div class="row header-container">
+                    <div class="w-100 col-xl-12 pl-20 pl-lg-10 pr-10 pr-lg-10">
+                        <div class="ng-star-inserted">
+                            <div class="header-container d-flex flex-row
+                                    justify-content-between align-items-center w-100">
+                                <div class="d-flex flex-row flex-fill">
+                                    <a href="https://beta.vivaaerobus.com/es-mx/" target="_blank" class="header-logo">
+                                        <img class="logo"
+                                            src="https://content.vivaaerobus.com/cdn/img/vivafan2/logo-viva-aerobus.png">
+                                    </a>
+                                </div>
+
+                                <div id="header-component" class="d-flex flex-row justify-content-end
+                                        align-items-center right-section">
+
+                                    <div class="content-icons" v-if="fistName">
+                                        <div class="d-flex flex-row justify-content-end
+                                            align-items-center right-section hide-sm">
+                                            <div class="header-separator"></div>
+                                            <div id="search">
+                                                <a href="https://beta.vivaaerobus.com/es-mx/" class="d-flex flex-row align-items-center
+                                                    justify-content-center icon-link">
+                                                    <img src="https://content.vivaaerobus.com/cdn/img/vivafan2/logo-viva-fan-v-3.svg"
+                                                        alt="">
+                                                </a>
+                                            </div>
+                                            <div class="header-separator"></div>
+                                        </div>
+                                        <div class="content-icon">
+                                            <div id="headerlogin">
+                                                <a class="icon-link">
+                                                    <i class="fas fa-user mr-1"></i> {{fistName}}
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+
+    <div class="container-fluid main_lp">
+        <!-- intro -->
+        <div class="row img-header ">
+            <div class="container">
+                <div class="row pt-2 pb-2 flex justify-content-center align-items-center spacer-first">
+                    <div class="col-12 col-sm-6 col-lg-6 col-xl-6 mt-3 mb-3">
+                        <div class="size-text">
+                            <p class="h1 m-xs-2" style="color: #fff;"> Viva Fan </p>
+                            <p class="small-text mt-2 m-xs-2" style="color: #fff;font-size: 16px;line-height: 1.3;"> La
+                                membresía para el viajero
+                                inteligente. <br> Tarifas bajas y equipaje extra,
+                                ¡así es ser Viva Fan! </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-5 col-lg-5 col-xl-3 mt-3 mb-3 text-center">
+                        <img class="img-hero" src="https://content.vivaaerobus.com/cdn/img/vivafan2/personaje.png"
+                            alt="Persona con maletas">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- VF se renueva -->
+        <div class="row bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-xl-12">
+                        <div class="membership-section title-width text-center m-auto pt-4 pb-3">
+                            <h3 class="mt-4"> Viva Fan se renueva </h3>
+                            <p>
+                                Disfruta de tarifas aún más bajas y beneficios exclusivos
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-12">
+                        <div id="carousel-tarifas" class="carousel slide" data-ride="carousel">
+                            <ul class="nav nav-tabs  mt-2 mb-2" id="myTab2" role="tablist">
+                                <li class="nav-item" id="tab1">
+                                    <a data-target="#carousel-tarifas" data-slide-to="0" class="active tab-carousel1">
+                                        Descuentos
+                                    </a>
+                                </li>
+                                <li class="nav-item" id="tab2">
+                                    <a data-target="#carousel-tarifas" class="tab-carousel2" data-slide-to="1">
+                                        Equipaje extra
+                                    </a>
+                                </li>
+                                <li class="nav-item" id="tab3">
+                                    <a data-target="#carousel-tarifas" class="tab-carousel3" data-slide-to="2">
+                                        Promociones
+                                    </a>
+                                </li>
+                                <li class="nav-item" id="tab4">
+                                    <a data-target="#carousel-tarifas" class="tab-carousel4" data-slide-to="3">
+                                        <img src="https://content.vivaaerobus.com/cdn/img/vivafan2/logo-smile-fly.svg"
+                                            alt="" srcset="">
+                                        Smile & Fly
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" id="0">
+                                    <div class="content-carousel">
+                                        <div
+                                            class="descuento-section w-100 padding flex justify-content-center align-items-center flex-wrap text-left">
+                                            <div class="col-12 col-sm-6 col-md-6 col-xl-6">
+                                                <h3 class="mt-1 mb-3">
+                                                    Tarifas más bajas
+                                                </h3>
+                                                <p>
+                                                    Ahorra hasta $ 400 MXN en vuelos nacionales e internacionales.
+                                                </p>
+                                            </div>
+                                            <div class="col-12 col-sm-6 col-md-6 col-xl-6">
+                                                <div class="img-content text-center">
+                                                    <img width="320px"
+                                                        src="https://content.vivaaerobus.com/cdn/img/vivafan2/beneficios-descuentos.svg"
+                                                        alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" id="1">
+                                    <div class="content-carousel">
+                                        <div
+                                            class="equipaje-section w-100 padding flex justify-content-center align-items-center flex-wrap">
+                                            <div class="col-12 col-sm-6 col-md-6 col-xl-6">
+                                                <h3 class="mt-1 mb-3">
+                                                    5 kg adicionales permitidos en Extra o Smart
+                                                </h3>
+                                                <p>
+                                                    Elige entre equipaje documentado o carry on y disfruta de kilos
+                                                    adicionales.
+                                                </p>
+                                            </div>
+                                            <div class="col-12 col-sm-6 col-md-6 col-xl-6">
+                                                <div class="img-content text-center">
+                                                    <img width="320px"
+                                                        src="https://content.vivaaerobus.com/cdn/img/vivafan2/EQUIPAJEEXTRA.svg"
+                                                        alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" id="2">
+                                    <div class="content-carousel">
+                                        <div
+                                            class="promociones-section w-100 padding flex justify-content-center align-items-center flex-wrap">
+                                            <div class="col-12 col-sm-6 col-md-6 col-xl-6">
+                                                <h3 class="mt-1 mb-3">
+                                                    Acceso a ventas especiales
+                                                </h3>
+                                                <p>
+                                                    Una vez al mes recibirás promociones exclusivas por ser Viva Fan.
+                                                </p>
+                                            </div>
+                                            <div class="col-12 col-sm-6 col-md-6 col-xl-6">
+                                                <div class="img-content text-center">
+                                                    <img width="320px"
+                                                        src="https://content.vivaaerobus.com/cdn/img/vivafan2/PROMOCIONES.svg"
+                                                        alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" id="3">
+                                    <div class="content-carousel">
+                                        <div
+                                            class="smile-and-fly-section w-100 padding flex justify-content-center align-items-center flex-wrap">
+                                            <div class="col-12 col-sm-6 col-md-6 col-xl-6">
+                                                <h3 class="mt-1 mb-3">
+                                                    Reconocimiento facial
+                                                </h3>
+                                                <p>
+                                                    Tu proceso de check in y abordaje tan sencillo como sonreír
+                                                </p>
+                                            </div>
+                                            <div class="col-12 col-sm-6 col-md-6 col-xl-6">
+                                                <div class="img-content text-center">
+                                                    <img width="320px"
+                                                        src="https://content.vivaaerobus.com/cdn/img/vivafan2/img-beneficios-smile-fly.svg"
+                                                        alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-12 mb-4">
+                        <div class="precios-title-cards w-100 text-center">
+                            <p class="title mb-0" style="color: #8cd400;">
+                                Ahora eliges la forma de pago
+                            </p>
+                            <h3 class="mb-1 pl-3 pr-3">
+                                Una membresía a tu medida
+                            </h3>
+                            <p>
+                                Adquiérela y disfruta los beneficios del nivel Plus
+                            </p>
+                        </div>
+                        <div class="precios-cards w-100 text-center  flex justify-content-center align-items-center flex-wrap mb-4"
+                            id="app">
+                            <div id="precios-cards-container"
+                                class="w-100 d-flex justify-content-center align-items-center flex-row flex-wrap">
+                                <div class="viva-card white shadow  card-price" v-for="plan in plans">
+                                    <div class="mt-2 badge w-100 flex justify-content-center"
+                                        v-if="plan.name === 'Cargo anual'">
+                                        <div class="viva-discount-badge">
+                                            <p class="small-title light"> Mayor ahorro</p>
+                                        </div>
+                                    </div>
+                                    <p class="h4" :class="[(plan.name == 'Cargo mensual')? 'mt-4': '']"> {{ plan.name }}
+                                    </p>
+                                    <div class="app-price">
+                                        <div
+                                            class="d-flex flex-row justify-content-center align-items-start app-price-main">
+                                            <span class="movile-price h3"> {{ plan.totalAmount }} </span>
+                                            <span class="app-price-sign small-title">
+                                                <i class="fas fa-dollar-sign"></i>
+                                            </span>
+                                        </div>
+                                        <div
+                                            class="d-flex flex-row justify-content-center align-items-center small-title app-price-cau">
+                                            <span class="app-price-unit-divider"> {{ plan.quote1 }}</span>
+                                        </div>
+                                    </div>
+                                    <p class="small-title mt-2 mb-2" style="color: #ff0000;">¡Oferta del primer año!</p>
+                                    <div class="button-viva text-center">
+                                        <a @click.prevent="suscriptionLayer(plan.code,plan.name)" target="_blank">
+                                            <button class="viva-btn secondary mb-2 mb-md-0">
+                                                <span> Suscribirme </span>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <p class="mt-2 mb-4 small-title opacity-5">
+                                        {{ plan.quote2 }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Viaja tanto como quieras-->
+        <div class="row img-section">
+            <div class="container">
+                <div class="row padding">
+                    <div class="col-12 col-xl-12">
+                        <div class="title-viaja-mucho title-width text-center m-auto pt-4">
+                            <h3 class="mb-xs-1"> Viaja tanto como quieras con tu membresía </h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-12">
+                        <div class="cards-section  mt-xs-0">
+                            <div class="article m-3 d-flex justify-content-center align-items-center flex-column">
+                                <img width="100px"
+                                    src="https://content.vivaaerobus.com/cdn/img/vivafan2/membresia-icono.svg"
+                                    alt="Descuentos">
+                                <div class="h4 text-center mt-4">
+                                    Adquiere tu <b>membresía</b> de forma mensual o anual
+                                </div>
+                            </div>
+                            <div class="article m-3 d-flex justify-content-center align-items-center flex-column">
+                                <img src="https://content.vivaaerobus.com/cdn/img/vivafan2/iniciasesion-icono.svg"
+                                    alt="Kilos extra">
+                                <div class="h4 text-center mt-3">
+                                    Al buscar un vuelo <b>inicia sesión</b> para acceder a las tarifas Viva Fan
+                                </div>
+                            </div>
+                            <div class="article m-3 d-flex justify-content-center align-items-center flex-column">
+                                <img src="https://content.vivaaerobus.com/cdn/img/vivafan2/descuentos-icono.svg"
+                                    alt="Ventas Especiales">
+                                <div class="h4 text-center mt-3">
+                                    Disfruta los <b>descuentos</b> y <b>beneficios</b> de tu membresía durante
+                                    un año
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Decidete a ser VF-->
+        <div class="row">
+            <div class="container">
+                <div class="row padding">
+                    <div class="col-12 col-xl-12">
+                        <div class="se-viva-fan title-width text-center m-auto pt-4">
+                            <h3> Decídete a ser Viva Fan </h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-12">
+                        <div class="testimonials-container">
+                            <div id="testimonials" class="w-100 flex justify-content-center flex-wrap mt-4">
+                                <div class="col-xl-4 card-comment text-center  pb-xs-4 mb-xs-4 slider-1">
+                                    <div class="img-profile">
+                                        <img src="https://content.vivaaerobus.com/cdn/img/vivafan2/avatar_1.png">
+                                    </div>
+                                    <p class="h3 mt-4 pt-4 mb-3 ">Mariela</p>
+                                    <blockquote class="pl-3 pr-3 regular-text">
+                                        “Por los precios asequibles, promociones, puntualidad y buen servicio”.
+                                    </blockquote>
+                                </div>
+                                <div class="col-xl-4 card-comment text-center mt-xs-4 pt-xs-4 mb-xs-4 slider-2">
+                                    <div class="img-profile">
+                                        <img src="https://content.vivaaerobus.com/cdn/img/vivafan2/avatar_2.png">
+                                    </div>
+                                    <p class="h3 mt-4 pt-4 mb-3">Ricardo</p>
+                                    <blockquote class="pl-3 pr-3 regular-text">
+                                        “Porque te ahorras muy buen dinero al comprar con la membresía, sobre todo si
+                                        eres de
+                                        los que vuelan más de dos veces al año”.
+                                    </blockquote>
+                                </div>
+                                <div class="col-xl-4 card-comment text-center mt-xs-4 pt-xs-4 slider-3">
+                                    <div class="img-profile">
+                                        <img src="https://content.vivaaerobus.com/cdn/img/vivafan2/avatar_3.png">
+                                    </div>
+                                    <p class="h3 mt-4 pt-4 mb-3">Mariana</p>
+                                    <blockquote class="pl-3 pr-3 regular-text">
+                                        “Con hacer dos vuelos redondos con ustedes uno recupera el dinero de la
+                                        membresía, de
+                                        ahí en adelante es ahorro en cada vuelo”.
+                                    </blockquote>
+                                </div>
+                                <!-- <div class="col-xl-4 card-comment text-center mt-xs-4 pt-xs-4">
+                                    <div class="img-profile">
+                                        <img src="https://content.vivaaerobus.com/cdn/img/vivafan2/avatar_4.png">
+                                    </div>
+                                    <p class="h3 mt-4 pt-4 mb-3">Luis</p>
+                                    <blockquote class="pl-3 pr-3 regular-text">
+                                        “Si la recomiendo, he viajado con descuentos muy buenos. Se ahorra buen dinero
+                                        con Viva
+                                        Fan!
+                                    </blockquote>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12">
+                        <div class="button-viva text-center mt-4">
+                            <button class="viva-btn secondary mb-md-0" id="btn-suscription-end">
+                                <span> Suscribirme </span>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Faqs-->
+        <div class="row">
+            <div class="container">
+                <div class="row padding justify-content-center">
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+                        <h3>Preguntas frecuentes</h3>
+                        <div class="faq-container mt-4 mb-4" id="faqAccordion">
+                            <div class="faq-container__item">
+                                <div class="section" id="heading1">
+                                    <a class="title faq1" data-toggle="collapse" data-target="#collapse-faq1"
+                                        aria-expanded="false" aria-controls="collapse-faq1" role="button">
+                                        ¿Qué es Viva Fan y cómo funciona?
+                                    </a>
+                                </div>
+                                <div id="collapse-faq1" class="collapse" aria-labelledby="heading1"
+                                    data-parent="#faqAccordion">
+                                    <div class="row">
+                                        <div class="col-xl-12 m-xs-2 mt-2 ml-1">
+                                            <p>
+                                                Viva Fan es la membresía que te otorga descuentos en tarifas y
+                                                beneficios de
+                                                viaje en vuelos de Viva Aerobus.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-container__item">
+                                <div class="section" id="heading2">
+                                    <a class="title faq2" data-toggle="collapse" data-target="#collapse-faq2"
+                                        aria-expanded="false" aria-controls="collapse-faq2" role="button">
+                                        ¿Qué precio tiene la membresía Viva Fan?
+                                    </a>
+                                </div>
+                                <div id="collapse-faq2" class="collapse" aria-labelledby="heading2"
+                                    data-parent="#faqAccordion">
+                                    <div class="row">
+                                        <div class="col-xl-12 m-xs-2 mt-2 ml-1">
+                                            <p>
+                                                Durante el primer año, la membresía mensual cuesta $55 MXN/mes y la
+                                                membresía
+                                                anual cuesta $550 MXN/año. A partir del segundo año, el precio de Viva
+                                                Fan
+                                                es de
+                                                $65 MXN/mes y $650 MXN/año.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-container__item">
+                                <div class="section" id="heading3">
+                                    <a class="title faq3" data-toggle="collapse" data-target="#collapse-faq3"
+                                        aria-expanded="false" aria-controls="collapse-faq3" role="button">
+                                        ¿Cómo puedo adquirir la membresía Viva Fan?
+                                    </a>
+                                </div>
+                                <div id="collapse-faq3" class="collapse" aria-labelledby="heading3"
+                                    data-parent="#faqAccordion">
+                                    <div class="row">
+                                        <div class="col-xl-12 m-xs-2 mt-2 ml-1">
+                                            <p class="mt-0 ">
+                                                Ingresa a <a
+                                                    href="https://beta.vivaaerobus.com/vivafan">https://beta.vivaaerobus.com/vivafan</a>
+                                                y selecciona un tipo de
+                                                membresía, inicia sesión con tu cuenta de Viva Aerobus y realiza el pago
+                                                con
+                                                tu
+                                                forma de pago preferido.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-container__item">
+                                <div class="section" id="heading4">
+                                    <a class="title faq4" data-toggle="collapse" data-target="#collapse-faq4"
+                                        aria-expanded="false" aria-controls="collapse-faq4" role="button">
+                                        ¿Cómo aplico un cupón de descuento?
+                                    </a>
+                                </div>
+                                <div id="collapse-faq4" class="collapse" aria-labelledby="heading4"
+                                    data-parent="#faqAccordion">
+                                    <div class="row">
+                                        <div class="col-xl-12 m-xs-2 mt-2 ml-1">
+                                            <p class="mt-0 ">
+                                                Sólo deberás ingresarlo junto a tu forma de pago al momento de hacer la
+                                                compra.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-container__item">
+                                <div class="section" id="heading5">
+                                    <a class="title faq5" data-toggle="collapse" data-target="#collapse-faq5"
+                                        aria-expanded="false" aria-controls="collapse-faq5" role="button">
+                                        ¿Puedo cambiar al titular de la membresía?
+                                    </a>
+                                </div>
+                                <div id="collapse-faq5" class="collapse" aria-labelledby="heading5"
+                                    data-parent="#faqAccordion">
+                                    <div class="row">
+                                        <div class="col-xl-12 m-xs-2 mt-2 ml-1">
+                                            <p class="mt-0 ">
+                                                No. La membresía Viva Fan es personal, única e intransferible, por lo
+                                                que
+                                                nadie más puede utilizarla. Antes de confirmar tu membresía, asegúrate
+                                                de
+                                                haber ingresado el nombre del titular como aparece en su identificación
+                                                oficial. Las correcciones se podrán realizar sólo durante las primeras
+                                                24
+                                                horas después de creada la membresía y para ello será necesario enviar
+                                                un
+                                                correo a <a
+                                                    href="mailto:vivafan@vivaaerobus.com">vivafan@vivaaerobus.com</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-container__item">
+                                <div class="section" id="heading6">
+                                    <a class="title faq6" data-toggle="collapse" data-target="#collapse-faq6"
+                                        aria-expanded="false" aria-controls="collapse-faq6" role="button">
+                                        ¿Qué vigencia tiene mi membresía?
+                                    </a>
+                                </div>
+                                <div id="collapse-faq6" class="collapse" aria-labelledby="heading6"
+                                    data-parent="#faqAccordion">
+                                    <div class="row">
+                                        <div class="col-xl-12 m-xs-2 mt-2 ml-1">
+                                            <p class="mt-0">
+                                                A partir del día de tu compra, la membresía tiene un año de duración. De
+                                                manera predeterminada se renovará por un segundo año a menos que
+                                                indiques
+                                                que no deseas que esto suceda, enviando un correo a <a
+                                                    href="mailto:vivafan@vivaaerobus.com">vivafan@vivaaerobus.com</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-container__item">
+                                <div class="section" id="heading7">
+                                    <a class="title faq7" data-toggle="collapse" data-target="#collapse-faq7"
+                                        aria-expanded="false" aria-controls="collapse-faq7" role="button">
+                                        ¿Cómo renuevo o cancelo mi membresía?
+                                    </a>
+                                </div>
+                                <div id="collapse-faq7" class="collapse" aria-labelledby="heading7"
+                                    data-parent="#faqAccordion">
+                                    <div class="row">
+                                        <div class="col-xl-12 m-xs-2 mt-2 ml-1">
+                                            <p class="mt-0">
+                                                La membresía Viva Fan se renueva automáticamente al cumplir un año y
+                                                tiene
+                                                una duración por el mismo periodo; es decir, no se puede cancelar
+                                                durante el
+                                                primer año. Puedes decidir no renovarla en cualquier momento o bien,
+                                                cancelarla a partir del segundo año de vigencia.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-container__item">
+                                <div class="section" id="heading8">
+                                    <a class="title faq8" data-toggle="collapse" data-target="#collapse-faq8"
+                                        aria-expanded="false" aria-controls="collapse-faq8" role="button">
+                                        ¿Cómo recupero mi contraseña?
+                                    </a>
+                                </div>
+                                <div id="collapse-faq8" class="collapse" aria-labelledby="heading8"
+                                    data-parent="#faqAccordion">
+                                    <div class="row">
+                                        <div class="col-xl-12 m-xs-2 mt-2 ml-1">
+                                            <p class="mt-0">
+                                                La contraseña de tu membresía es la misma que utilizas para iniciar
+                                                sesión
+                                                en <a href="http://www.vivaaerobus.com"
+                                                    target="_blank">www.vivaaerobus.com.</a> Si la olvidaste, sólo debes
+                                                hacer clic en “olvidé mi
+                                                contraseña”.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-container__item">
+                                <div class="section" id="heading9">
+                                    <a class="title faq9" data-toggle="collapse" data-target="#collapse-faq9"
+                                        aria-expanded="false" aria-controls="collapse-faq9" role="button">
+                                        ¿Qué pasa si al iniciar sesión se me indica que no tengo membresía?
+                                    </a>
+                                </div>
+                                <div id="collapse-faq9" class="collapse" aria-labelledby="heading9"
+                                    data-parent="#faqAccordion">
+                                    <div class="row">
+                                        <div class="col-xl-12 m-xs-2 mt-2 ml-1">
+                                            <p class="mt-0">
+                                                Si cuentas con una membresía Viva Fan y no puedes utilizarla o tienes
+                                                algún
+                                                problema para iniciar sesión, puedes escribirnos a <a
+                                                    href="mailto:vivafan@vivaaerobus.com">vivafan@vivaaerobus.com</a> y
+                                                con gusto te ayudaremos.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-container__item">
+                                <div class="section" id="heading10">
+                                    <a class="title faq10" data-toggle="collapse" data-target="#collapse-faq10"
+                                        aria-expanded="false" aria-controls="collapse-faq10" role="button">
+                                        ¿Cómo obtengo mi factura?
+                                    </a>
+                                </div>
+                                <div id="collapse-faq10" class="collapse" aria-labelledby="heading10"
+                                    data-parent="#faqAccordion">
+                                    <div class="row">
+                                        <div class="col-xl-12 m-xs-2 mt-2 ml-1">
+                                            <p class="mt-0">
+                                                Para obtener un CFDI o factura puedes escribirnos a
+                                                vivafan@vivaaerobus.com
+                                                y con gusto nuestro equipo atenderá tu solicitud.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Consulta TYC-->
+        <div class="row">
+            <div class="tyc-bar w-100">
+                <div class="container">
+                    <div class="row m-xs-2">
+                        <div class="col-xl-12 text-center mt-3">
+                            <a href="https://www.vivaaerobus.com/mx/info/terminos-y-condiciones-completos#b19-0"
+                                target="_blank" style="color: #fff;">
+                                <p>
+                                    Consulta las condiciones de nuestros beneficios adicionales. <span class="tyc-span">
+                                        Ver términos y condiciones </span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <div class="row">
+            <div class="footer-container-end w-100 ">
+                <!---->
+                <!---->
+                <div class="container px-20 px-lg-10">
+                    <!---->
+                    <div class="footer-row padding">
+                        <div class="row mb-0">
+                            <div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5">
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <h5 class="medium-title light mt-0 mb-2 mb-md-4">Aceptamos los siguientes
+                                            métodos de pago</h5>
+                                    </div>
+                                </div>
+                                <div class="row mb-0">
+                                    <div class="col-5">
+                                        <p class="medium-title light opacity-7">Tarjetas de crédito</p>
+                                        <ul class="m-0 p-0 list-unstyled">
+                                            <li class="medium-title light d-inline-block mr-2">
+                                                <i class="subfooter-icon fab fa-cc-mastercard"> </i>
+                                            </li>
+                                            <li class="medium-title light d-inline-block mr-2">
+                                                <i class="subfooter-icon fab fa-cc-amex"></i>
+                                            </li>
+                                            <li class="medium-title light d-inline-block">
+                                                <i class="subfooter-icon fab fa-cc-visa"></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-7 col-md-7 col-lg-7 col-xl-7">
+                                <p class="regular-text light opacity-7 text-right d-none d-md-block">
+                                    Aeropuerto Internacional de Monterrey. Terminal C, Carretera Miguel
+                                    Alemán Km 24, Apodaca, NL, México, C.P. 66600
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Start personal style lp */
+
+        .slick-dots li.slick-active button::before {
+            color: #8cd400;
+        }
+
+        /* Faqs */
+        .faq-container__item {
+            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 15px;
+            padding-top: 15px;
+        }
+
+        .faq-container__item .section .title {
+            margin: 5px 0;
+        }
+
+        .faq-container__item .section .title[aria-expanded="true"]::after {
+            font-family: 'Font Awesome 5 Pro';
+            content: "\f107";
+            transform: rotate(180deg);
+        }
+
+        .faq-container__item .section .title::after {
+            font-family: 'Font Awesome 5 Pro';
+            content: "\f107";
+            text-align: center;
+            transform: rotate(0deg);
+            padding: 10px;
+            position: absolute;
+            right: 0;
+            transition: ease 0.3s;
+        }
+
+        .slick-dots li button::before {
+            font-size: 12px;
+        }
+
+        /* slick arrows */
+        .slick-prev::before,
+        .slick-next::before {
+            font-size: 30px;
+            color: #2771eb;
+        }
+
+        /* end slick arrows */
+
+        .content-icons {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+        }
+
+
+        .tyc-span {
+            font-size: 18px;
+
+        }
+
+        .tyc-bar {
+            margin-top: 2rem;
+            min-height: 65px;
+
+            background-color: #004a23;
+        }
+
+        .size-text {
+            max-width: 450px;
+        }
+
+        .testimonials-container {
+            max-width: 1100px !important;
+            margin: 0 auto;
+        }
+
+        .img-hero {
+            max-height: 350px;
+        }
+
+        .content-carousel {
+            max-width: 800px;
+            max-height: 395px;
+            margin: 0 auto;
+        }
+
+        .spacer-first {
+            margin-top: 76px;
+        }
+
+        /* footer */
+        .footer-container-end {
+            background-color: #002612;
+        }
+
+        .footer-row {
+            padding: 70px 0 40px;
+            margin-bottom: 0;
+        }
+
+        .subfooter-icon {
+            color: #fff;
+            font-size: 25px;
+        }
+
+        /* end footer */
+
+        /* header styles */
+        .logo {
+            width: auto;
+            height: 30px;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            margin-left: 14px;
+        }
+
+        .viva-header {
+            position: fixed;
+            top: 0;
+            z-index: 10;
+            background-color: #fff;
+            height: 76px;
+            width: 100%;
+        }
+
+        .header-container {
+            height: 100%;
+            align-items: center;
+        }
+
+        .header-container .left-section>.left-button:not(:last-child) {
+            margin-right: 23px;
+        }
+
+        .header-container .left-section>.left-button {
+            height: 33px;
+        }
+
+        .header-container .right-section .right-button {
+            height: 33px;
+            padding: 0;
+            overflow: visible;
+        }
+
+        .header-container .right-section .header-link {
+            text-decoration: none;
+            margin-left: 23px;
+        }
+
+        .header-container .right-section .header-separator {
+            margin: 0 20px;
+            width: 1px;
+            height: 19px;
+            background-color: #e5e5e5;
+        }
+
+        /* end header styles */
+
+        .size-title {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .header {
+            width: 100%;
+            margin: 5px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-container {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: start;
+            -ms-flex-pack: start;
+            justify-content: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            width: 100%;
+            /* float: left; */
+        }
+
+        .faq-container .item {
+            border-bottom: 1px solid #e5e5e5;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            transition: .2s cubic-bezier(.84, .13, 0, .75);
+            margin-bottom: 15px;
+
+        }
+
+        .faq-container .item .title {
+            cursor: pointer;
+        }
+
+        .faq-container .item .title p {
+            font-weight: bold;
+            margin: 0;
+            padding: 10px 0px;
+        }
+
+        .faq-container .item .content {
+            display: none;
+        }
+
+        .faq-container .item .content a {
+            color: #34B233;
+        }
+
+        .faq-container .item.active {
+            border-bottom: 1px solid #e5e5e5;
+
+        }
+
+        .faq-container .item.active .title p {
+            color: #555;
+        }
+
+        .faq-container .item.active .content {
+            display: block;
+        }
+
+        .img-profile>img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto;
+            position: absolute;
+            left: calc(50% - 50px);
+            top: -50px;
+        }
+
+        .card-comment {
+            max-width: 380px;
+            margin: 10px;
+            border-radius: 5px;
+            /* box-shadow: 0 0 50px 0 rgba(141, 141, 141, 0.07), 0 1px 5px 0 rgba(95, 95, 95, 0.07) !important; */
+            border: solid 2px #e3e0e0;
+            background-color: #fff;
+            transition: .5s cubic-bezier(.84, .13, 0, .75);
+            min-height: 210px;
+        }
+
+        .title-width {
+            max-width: 620px;
+        }
+
+
+        .cards-section>.article {
+            max-width: 320px;
+            text-align: center;
+        }
+
+        .cards-section {
+            gap: 20px 80px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .img-section {
+            background-image: url('https://content.vivaaerobus.com/cdn/img/vivafan2/background-3.svg');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .viva-discount-badge {
+            color: #fff;
+            box-sizing: border-box;
+            overflow: hidden;
+            padding: 2px 15px;
+            height: 20px;
+            background-color: #ff4d29;
+            border-radius: 20px;
+            max-width: 120px;
+        }
+
+        .viva-btn {
+            background: #2771eb !important;
+            max-width: 300px;
+            width: 300px;
+            color: #fff !important;
+            border: 1px solid #2771eb;
+        }
+
+        .viva-btn:hover {
+            border: 1px solid #2771eb;
+            background: #5589dd !important;
+
+        }
+
+        .card-price:hover {
+            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .24) !important;
+        }
+
+        .card-price {
+            margin: 1rem;
+            width: 360px;
+            transition: box-shadow .3s cubic-bezier(.445, .05, .55, .95);
+        }
+
+        .tab-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Tabs panel */
+
+        #myTab2 {
+            border: none;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-wrap: nowrap;
+        }
+
+
+        #myTab2>li>a {
+            padding: 20px;
+            color: #333333;
+            border: none;
+            border-bottom: 3px solid #e8e9eb;
+            font-family: Axiforma, Arial;
+
+        }
+
+
+        #myTab2>li {
+            border-bottom: none;
+            list-style: none;
+            font-weight: bold;
+
+        }
+
+        #myTab2>li:hover>a {
+            background: none;
+            color: #333333;
+            border-color: #fff;
+            border-bottom: 3px solid #c2dd8d;
+            text-decoration: none;
+
+        }
+
+        #myTab2>li>a.active {
+            border-bottom: 3px solid #8cd400;
+            position: relative;
+        }
+
+        #myTab2>li.active>a {
+            border: 0;
+            color: #333333;
+        }
+
+        /* end tabs style */
+
+
+        .img-header {
+            background: #2771EB;
+        }
+
+        .slick-track {
+            padding-top: 50px;
+        }
+
+
+
+        /* global styles don't erase */
+        .main_lp a:hover {
+            text-decoration: underline;
+        }
+
+        .main_lp a {
+            color: #34B233;
+        }
+
+        .intro div h1 {
+            font-family: Dosis-ExtraBold, sans-serif;
+            text-transform: none;
+        }
+
+        .intro div h2 {
+            font-family: Dosis-Bold, sans-serif;
+            line-height: 1.3;
+            text-transform: none;
+        }
+
+        .intro {
+            width: 100%;
+            padding: 3% 10%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        .padding {
+            padding: 50px 0;
+        }
+
+
+        /* end global styles */
+
+
+        /* Media querys of this landing */
+        @media (max-width: 1024px) {}
+
+        @media (max-width: 768px) {
+            #myTab2 {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            min-height: 50px;
+        }
+
+            #tab2,
+            #tab4 {
+                min-width: 150px;
+            }
+
+            /* default media querys */
+            body>.container {
+                padding: 0px;
+            }
+
+            .intro div h1 {
+                font-size: 33px;
+            }
+
+            .intro div h2 {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            #myTab2 {
+                -webkit-overflow-scrolling: touch;
+                display: flex;
+                justify-content: flex-start;
+                min-height: 30px;
+            }
+
+            .content-carousel {
+                max-height: max-content;
+            }
+
+            #precios-cards-container>.slick-list>.slick-track {
+                padding-top: 0px;
+            }
+
+            .faq-container__item .section {
+                padding: 5px;
+            }
+
+            .faq-container__item .section .title::after {
+                padding: 0px;
+            }
+
+            .size-text {
+                margin-left: 28px;
+                margin-right: 28px;
+            }
+
+            /* default media querys */
+
+            #myTab2>li>a {
+                padding: 20px 15px 20px 15px;
+                margin: -14px;
+            }
+
+            #myTab2>li {
+                height: 60px;
+            }
+
+            .card-comment {
+                height: auto;
+                padding-bottom: 30px;
+            }
+
+            .card-price {
+                width: 85%;
+                margin-top: 2rem;
+
+            }
+
+            .viva-btn {
+                max-width: 90%;
+            }
+
+            .intro {
+                padding: 5px;
+            }
+
+            .row>[class*="col-"] {
+                padding-left: 1px !important;
+                padding-right: 1px !important;
+
+            }
+
+            .padding {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                plans: null,
+            },
+            mounted() {
+                let config = {
+                    headers: {
+                        'X-Channel': 'web'
+                    }
+                }
+
+                axios
+                    .get('https://ei3iydg2se.execute-api.us-east-1.amazonaws.com/v1/plans/vfn', config)
+                    .then(response => {
+                        let data = response.data.data.plans;
+
+                        let totalMontly = data[0].planAmount.toFixed();
+                        let totalAnnnual = data[1].planAmount.toFixed();
+
+                        let plansFinal = {
+                            montly: {
+                                name: "Cargo mensual",
+                                totalAmount: "55",
+                                quote1: "MXN /MES",
+                                quote2: "$65 MXN mensuales a partir del segundo año",
+                                code: data[0].code
+                            },
+                            annual: {
+                                name: "Cargo anual",
+                                totalAmount: 550,
+                                quote1: "MXN /AÑO",
+                                quote2: "$650 MXN anuales a partir del segundo año ",
+                                code: data[1].code
+                            }
+                        }
+
+                        this.plans = plansFinal;
+                    })
+
+
+
+            },
+            methods: {
+                suscriptionLayer(planCode, planName) {
+                    let label = (planName === 'Cargo mensual') ? '1' : '2';
+                    dataLayer.push({
+                        'event': 'ev_vf_content_slide_plans', //static data
+                        'category': 'home_content',    //static data
+                        'action': 'slide_content',     //static data
+                        'label': label                   //dynamic data
+                    });
+                    window.open("https://beta.vivaaerobus.com/vivafan/subscription?plan=" + planCode, '_blank');
+                }
+
+            }
+        });
+
+
+        new Vue({
+            el: "#header-component",
+            data: {
+                fistName: null,
+                lastName: null
+            },
+            async mounted() {
+                try {
+                    if (localStorage['viva-user-token']) {
+
+                        var userData = await axios({
+                            url: 'https://beta.vivaaerobus.com/api/web/v1/account',
+                            method: 'get',
+                            headers: {
+                                "x-api-key": "zasqyJdSc92MhWMxYu6vW3hqhxLuDwKog3mqoYkf",
+                                "X-Channel": "web",
+                                Authorization: `Bearer ${localStorage['viva-user-token']}`,
+                            }
+                        });
+
+                        this.fistName = userData.data.data.personalDetails.name.firstName;
+                        this.lastName = userData.data.data.personalDetails.name.lastName;
+                    }
+                } catch (error) {
+                    console.error(error);
+                }
+            }
+        });
+
+        $(document).ready(function () {
+            //DataLayer
+
+            // Tabs
+            $('.tab-carousel1').on('click', function () {
+                console.log('fired tab1');
+                dataLayer.push({
+                    'event': 'ev_vf_click_on_benefits', //static data
+                    'category': 'home_content',        //static data
+                    'action': 'click_on_benefits',     //static data
+                    'benefits': 'Descuentos'           //dynamic data
+                });
+
+
+            });
+
+            $('.tab-carousel2').on('click', function () {
+                console.log('fired tab2');
+                dataLayer.push({
+                    'event': 'ev_vf_click_on_benefits', //static data
+                    'category': 'home_content',        //static data
+                    'action': 'click_on_benefits',     //static data
+                    'benefits': 'Equipaje Extra'           //dynamic data
+                });
+
+
+            });
+
+            $('.tab-carousel3').on('click', function () {
+                console.log('fired tab3');
+                dataLayer.push({
+                    'event': 'ev_vf_click_on_benefits', //static data
+                    'category': 'home_content',        //static data
+                    'action': 'click_on_benefits',     //static data
+                    'benefits': 'Promociones'           //dynamic data
+                });
+
+            });
+            // FAQ'S
+
+
+            //Faqs
+            function sendLayerFAQS(faq) {
+                dataLayer.push({
+                    'event': 'ev_vf_expand_q&a',     //static data
+                    'category': 'home_content',      //static data
+                    'action': 'expand_q&a',          //static data
+                    'label': faq //dynamic data
+                });
+
+            }
+            // FAQS
+            $('.faq1').on('click', function () {
+                sendLayerFAQS('¿Qué es Viva Fan y cómo funciona?')
+            });
+            $('.faq2').on('click', function () {
+                sendLayerFAQS('¿Qué precio tiene la membresía Viva Fan?')
+            });
+            $('.faq3').on('click', function () {
+                sendLayerFAQS('¿Cómo puedo adquirir la membresía Viva Fan ?')
+
+            });
+            $('.faq4').on('click', function () {
+                sendLayerFAQS('¿Cómo aplico un cupón de descuento?')
+            });
+            $('.faq5').on('click', function () {
+                sendLayerFAQS('¿Puedo cambiar al titular de la membresía?')
+            });
+            $('.faq6').on('click', function () {
+                sendLayerFAQS('¿Qué vigencia tiene mi membresía?')
+            });
+            $('.faq7').on('click', function () {
+                sendLayerFAQS('¿Cómo renuevo o cancelo mi membresía?')
+            });
+            $('.faq8').on('click', function () {
+                sendLayerFAQS('¿Cómo recupero mi contraseña? ')
+            });
+            $('.faq9').on('click', function () {
+                sendLayerFAQS('¿Qué pasa si al iniciar sesión se me indica que no tengo membresía?')
+            });
+            $('.faq10').on('click', function () {
+                sendLayerFAQS('¿Cómo obtengo mi factura? ')
+            });
+
+            $('#btn-suscription-end').on('click', function () {
+                dataLayer.push({
+                    'event': 'ev_vf_content_slide_plans', //static data
+                    'category': 'home_content',    //static data
+                    'action': 'slide_content',     //static data
+                    'label': '1'                   //dynamic data
+                });
+                window.open("https://beta.vivaaerobus.com/vivafan/subscription?plan=vfn_vhs_sgl_mpy", '_blank');
+
+            })
+
+
+
+
+            $('.faq-container .item .title').click(function (e) {
+                e.preventDefault();
+
+                $('.faq-container .item').removeClass('active');
+                $(this).parent().addClass('active');
+
+                // change direction arrows
+                $('.faq-container > .item > .title > .header > i').removeClass('fa-angle-up');
+                $('.faq-container > .item > .title > .header > i').addClass('fa-angle-down');
+
+                var icon = $(this).children().children('i');
+                if ($(this).parent().hasClass('active')) {
+                    icon.removeClass('fa-angle-down');
+                    icon.addClass('fa-angle-up');
+
+                }
+
+            });
+
+            //carrousel
+            $('#carousel-tarifas').on('slide.bs.carousel', function onSlide(ev) {
+                var id = ev.relatedTarget.id;
+                switch (id) {
+                    case "0":
+                        $('#myTab2 li a').removeClass('active');
+                        $("#tab1 a").addClass('active');
+                        break;
+                    case "1":
+                        $('#myTab2 li a').removeClass('active');
+                        $("#tab2 a").addClass('active');
+                        break;
+                    case "2":
+                        $('#myTab2 li a').removeClass('active');
+                        $("#tab3 a").addClass('active');
+                        break;
+                    case "3":
+                        $('#myTab2 li a').removeClass('active');
+                        $("#tab4 a").addClass('active');
+                        break;
+                    default:
+                    //the id is none of the above
+                }
+            })
+            // slider comments
+            $('.slider-1').on('click', function (ev) {
+                dataLayer.push({
+                    'event': 'ev_vf_slide_content',            //static data
+                    'category': 'vf_home_content',             //static data
+                    'action': 'slide_content',                 //static data
+                    'slide_position': '1'                     //dynamic data
+                });
+            });
+            $('.slider-2').on('click', function (ev) {
+                dataLayer.push({
+                    'event': 'ev_vf_slide_content',            //static data
+                    'category': 'vf_home_content',             //static data
+                    'action': 'slide_content',                 //static data
+                    'slide_position': '2'                     //dynamic data
+                });
+            });
+            $('.slider-3').on('click', function (ev) {
+                dataLayer.push({
+                    'event': 'ev_vf_slide_content',            //static data
+                    'category': 'vf_home_content',             //static data
+                    'action': 'slide_content',                 //static data
+                    'slide_position': '3'                     //dynamic data
+                });
+            });
+
+            // =========================== Sliders =====================================
+            $("#testimonials").slick({
+                dots: false,
+                autoplay: false,
+                arrows: false,
+                infinite: false,
+                centerMode: false,
+                speed: 2000,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false,
+                        dots: true,
+                        autoplay: true,
+                    }
+                }]
+            });
+
+
+            // cards-section
+
+            $(".cards-section").slick({
+                dots: false,
+                autoplay: false,
+                arrows: false,
+                infinite: false,
+                centerMode: false,
+                speed: 2000,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false,
+                        dots: true,
+                        autoplay: true,
+                    }
+                }]
+            });
+
+
+            setTimeout(() => {
+                $("#precios-cards-container").slick({
+                    dots: false,
+                    autoplay: false,
+                    arrows: false,
+                    infinite: false,
+                    centerMode: false,
+                    speed: 2000,
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    responsive: [{
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: false
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 576,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            arrows: false,
+                            dots: true,
+                            autoplay: false,
+                        }
+                    }]
+                });
+
+            }, 2000)
+
+
+
+
+
+
+        });
+    </script>
+    <!-- lp-end-here -->
+
+
+</body>
+
+</html>
