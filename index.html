@@ -111,6 +111,12 @@
                                 membresía para el viajero
                                 inteligente. <br> Tarifas bajas y equipaje extra,
                                 ¡así es ser Viva Fan! </p>
+                            <div class="button-viva mt-4">
+                                <button class="viva-btn secondary mb-md-0" id="btn-suscription-end">
+                                    <span> Suscribirme </span>
+                                </button>
+
+                            </div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-5 col-lg-5 col-xl-3 mt-3 mb-3 text-center">
@@ -150,13 +156,13 @@
                                         Promociones
                                     </a>
                                 </li>
-                                <li class="nav-item" id="tab4">
+                                <!-- <li class="nav-item" id="tab4">
                                     <a data-target="#carousel-tarifas" class="tab-carousel4" data-slide-to="3">
                                         <img src="https://content.vivaaerobus.com/cdn/img/vivafan2/logo-smile-fly.svg"
                                             alt="" srcset="">
                                         Smile & Fly
                                     </a>
-                                </li>
+                                </li> -->
                             </ul>
                             <div class="carousel-inner">
                                 <div class="carousel-item active" id="0">
@@ -191,7 +197,7 @@
                                                 </h3>
                                                 <p>
                                                     Elige entre equipaje documentado o carry on y disfruta de kilos
-                                                    adicionales.
+                                                    adicionales. Selecciónalo al momento de hacer tu reserva
                                                 </p>
                                             </div>
                                             <div class="col-12 col-sm-6 col-md-6 col-xl-6">
@@ -226,7 +232,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="carousel-item" id="3">
+                               <!--  <div class="carousel-item" id="3">
                                     <div class="content-carousel">
                                         <div
                                             class="smile-and-fly-section w-100 padding flex justify-content-center align-items-center flex-wrap">
@@ -247,7 +253,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -274,12 +280,13 @@
                                             <p class="small-title light"> Mayor ahorro</p>
                                         </div>
                                     </div>
-                                    <p class="h4" :class="[(plan.name == 'Cargo mensual')? 'mt-4': '']"> {{ plan.name }}
+                                    <p class="h4" :class="[(plan.code === 'vfn_vhs_sgl_mpy')? 'mt-4': '']">
+                                        {{ plan.name }}
                                     </p>
                                     <div class="app-price">
                                         <div
                                             class="d-flex flex-row justify-content-center align-items-start app-price-main">
-                                            <span class="movile-price h3"> {{ plan.totalAmount }} </span>
+                                            <span class="movile-price h3"> {{ plan.customPlanAmount }} </span>
                                             <span class="app-price-sign small-title">
                                                 <i class="fas fa-dollar-sign"></i>
                                             </span>
@@ -291,7 +298,7 @@
                                     </div>
                                     <p class="small-title mt-2 mb-2" style="color: #ff0000;">¡Oferta del primer año!</p>
                                     <div class="button-viva text-center">
-                                        <a @click.prevent="suscriptionLayer(plan.code,plan.name)" target="_blank">
+                                        <a @click.prevent="suscriptionLayer(plan)" target="_blank">
                                             <button class="viva-btn secondary mb-2 mb-md-0">
                                                 <span> Suscribirme </span>
                                             </button>
@@ -642,6 +649,27 @@
                                                 Para obtener un CFDI o factura puedes escribirnos a
                                                 vivafan@vivaaerobus.com
                                                 y con gusto nuestro equipo atenderá tu solicitud.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-container__item">
+                                <div class="section" id="heading11">
+                                    <a class="title faq11" data-toggle="collapse" data-target="#collapse-faq11"
+                                        aria-expanded="false" aria-controls="collapse-faq11" role="button">
+                                        ¿Cómo accedo al beneficio de 5 kilos adicionales?
+                                    </a>
+                                </div>
+                                <div id="collapse-faq11" class="collapse" aria-labelledby="heading11"
+                                    data-parent="#faqAccordion">
+                                    <div class="row">
+                                        <div class="col-xl-12 m-xs-2 mt-2 ml-1">
+                                            <p class="mt-0">
+                                                La membresía Viva Fan te da acceso a 5 kilos adicionales en carry on o
+                                                equipaje documentado al reservar en Combo Extra o Combo Smart. Al
+                                                reservar tu vuelo deberás seleccionar el equipaje identificado como
+                                                beneficio Viva Fan para que este se añada a tu reserva.
                                             </p>
                                         </div>
                                     </div>
@@ -1089,7 +1117,7 @@
 
 
         .img-header {
-            background: #2771EB;
+            background: #93B8F5;
         }
 
         .slick-track {
@@ -1144,15 +1172,15 @@
 
         @media (max-width: 768px) {
             #myTab2 {
-            overflow-x: scroll;
-            overflow-y: hidden;
-            -webkit-overflow-scrolling: touch;
-            min-height: 50px;
-        }
+                overflow-x: scroll;
+                overflow-y: hidden;
+                -webkit-overflow-scrolling: touch;
+                min-height: 50px;
+            }
 
             #tab2,
             #tab4 {
-                min-width: 150px;
+                min-width: 130px;
             }
 
             /* default media querys */
@@ -1173,7 +1201,7 @@
             #myTab2 {
                 -webkit-overflow-scrolling: touch;
                 display: flex;
-                justify-content: flex-start;
+                justify-content: center;
                 min-height: 30px;
             }
 
@@ -1201,7 +1229,7 @@
             /* default media querys */
 
             #myTab2>li>a {
-                padding: 20px 15px 20px 15px;
+                /* padding: 20px 15px 20px 15px; */
                 margin: -14px;
             }
 
@@ -1256,45 +1284,49 @@
                 axios
                     .get('https://ei3iydg2se.execute-api.us-east-1.amazonaws.com/v1/plans/vfn', config)
                     .then(response => {
-                        let data = response.data.data.plans;
+                        let plans = response.data.data.plans;
+                        plans.map((p) => {
+                            if (p.code === "vfn_vhs_sgl_mpy") {
+                                p.name = "Cargo mensual";
+                                p.quote1 = "MXN /MES";
+                                p.quote2 = "$65 MXN mensuales a partir del segundo año";
+                                p.customPlanAmount = "55";
 
-                        let totalMontly = data[0].planAmount.toFixed();
-                        let totalAnnnual = data[1].planAmount.toFixed();
-
-                        let plansFinal = {
-                            montly: {
-                                name: "Cargo mensual",
-                                totalAmount: "55",
-                                quote1: "MXN /MES",
-                                quote2: "$65 MXN mensuales a partir del segundo año",
-                                code: data[0].code
-                            },
-                            annual: {
-                                name: "Cargo anual",
-                                totalAmount: 550,
-                                quote1: "MXN /AÑO",
-                                quote2: "$650 MXN anuales a partir del segundo año ",
-                                code: data[1].code
+                            } else {
+                                p.name = "Cargo anual";
+                                p.quote1 = "MXN /AÑO";
+                                p.quote2 = "$650 MXN anuales a partir del segundo año ";
+                                p.customPlanAmount = "550";
                             }
-                        }
 
-                        this.plans = plansFinal;
+                        });
+                        this.plans = plans;
                     })
-
-
-
             },
             methods: {
-                suscriptionLayer(planCode, planName) {
-                    let label = (planName === 'Cargo mensual') ? '1' : '2';
-                    dataLayer.push({
-                        'event': 'ev_vf_content_slide_plans', //static data
-                        'category': 'home_content',    //static data
-                        'action': 'slide_content',     //static data
-                        'label': label                   //dynamic data
-                    });
-                    window.open("https://beta.vivaaerobus.com/vivafan/subscription?plan=" + planCode, '_blank');
+                suscriptionLayer(plan) {
+                    let gtmObject = {
+                        event: 'begin_checkout', //GA4 native event
+                        category: 'vf_membership', //static data
+                        action: 'begin_checkout', //static data
+                        subscribe_position: 'slider', //Dynamic data CD 27
+                        membership_type: plan.paymentTerm, //Dynamic data CD 7
+                        ecommerce: {
+                            items: [{
+                                item_name: 'Viva Fan',
+                                item_id: plan.code,
+                                price: plan.customPlanAmount,
+                                item_variant: plan.paymentTerm, //Dynamic data
+                                quantity: 1
+                            }]
+                        }
+                    };
+
+                    console.log(gtmObject);
+                    dataLayer.push(gtmObject);
+                    window.open("https://beta.vivaaerobus.com/vivafan/subscription?plan=" + plan.code, '_blank');
                 }
+
 
             }
         });
@@ -1404,13 +1436,16 @@
                 sendLayerFAQS('¿Cómo renuevo o cancelo mi membresía?')
             });
             $('.faq8').on('click', function () {
-                sendLayerFAQS('¿Cómo recupero mi contraseña? ')
+                sendLayerFAQS('¿Cómo recupero mi contraseña?')
             });
             $('.faq9').on('click', function () {
                 sendLayerFAQS('¿Qué pasa si al iniciar sesión se me indica que no tengo membresía?')
             });
             $('.faq10').on('click', function () {
-                sendLayerFAQS('¿Cómo obtengo mi factura? ')
+                sendLayerFAQS('¿Cómo obtengo mi factura?')
+            });
+            $('.faq10').on('click', function () {
+                sendLayerFAQS('¿Cómo accedo al beneficio de 5 kilos adicionales?')
             });
 
             $('#btn-suscription-end').on('click', function () {
@@ -1423,8 +1458,6 @@
                 window.open("https://beta.vivaaerobus.com/vivafan/subscription?plan=vfn_vhs_sgl_mpy", '_blank');
 
             })
-
-
 
 
             $('.faq-container .item .title').click(function (e) {
@@ -1462,10 +1495,10 @@
                         $('#myTab2 li a').removeClass('active');
                         $("#tab3 a").addClass('active');
                         break;
-                    case "3":
-                        $('#myTab2 li a').removeClass('active');
-                        $("#tab4 a").addClass('active');
-                        break;
+                    // case "3":
+                    //     $('#myTab2 li a').removeClass('active');
+                    //     $("#tab4 a").addClass('active');
+                    //     break;
                     default:
                     //the id is none of the above
                 }
